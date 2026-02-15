@@ -109,3 +109,28 @@ fn main() {
         compute_gv(producer, &reputations)
     );
 }
+
+// EXECUTION LOGS: ------------------------------------------------------------
+//
+// norm ec: [0.991025, 1.000000, 0.184878, 0.152143, 0.127192]
+
+// --- User 4 initial state ---
+// weight: 5.500000
+// ec: 0.088713, norm_ec: 0.127192
+// reputation: 0.100000
+// graph value: 0.014996
+
+// --- Transaction 1: buyer 2 rates producer 4 with 5.0 ---
+// buyer 2 graph value: 0.026227
+// reputation: 0.100000 -> 0.131133 (Δ = 0.031133)
+// graph value: 0.014996 -> 0.019664
+
+// --- Transaction 2: buyer 3 rates producer 4 with 5.0 ---
+// buyer 3 graph value: 0.018433
+// reputation: 0.131133 -> 0.111649 (Δ = -0.019483)
+// graph value: 0.019664 -> 0.016742
+
+// --- Transaction 3: buyer 1 rates producer 4 with 5.0 ---
+// buyer 1 graph value: 2.450000
+// reputation: 0.111649 -> 4.157766 (Δ = 4.046117) <--- Big change in reputation of peer 4
+// graph value: 0.016742 -> 0.623482
