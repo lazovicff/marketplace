@@ -1,0 +1,5 @@
+[package]
+name = "marketplace"
+version = "0.1.0"
+edition = "2021"
+description = "A simple implementation of Eigenvector Centrality"
